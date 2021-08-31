@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile1st/config/constant.dart';
+import 'package:mobile1st/screen/login.dart';
 
 class Index extends StatelessWidget {
   @override
@@ -7,7 +9,7 @@ class Index extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        color: Colors.white,
+        color: pColor,
         child: ListView(
           children: [
             Image.asset(
@@ -38,14 +40,15 @@ class Index extends StatelessWidget {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                   textStyle: TextStyle(
-                    fontSize: 20,
+                    fontSize: pFont,
                   ),
                   primary: Colors.amber[900],
                   padding: EdgeInsets.all(20.0),
                   shape: StadiumBorder()),
               child: Text('LOGIN'),
               onPressed: () {
-                print("LOGIN");
+                print("Welcome");
+                Navigator.pushNamed(context, 'login');
               },
             ),
             SizedBox(
@@ -54,14 +57,15 @@ class Index extends StatelessWidget {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                   textStyle: TextStyle(
-                    fontSize: 20,
+                    fontSize: pFont,
                   ),
                   primary: Colors.amber[900],
                   padding: EdgeInsets.all(20.0),
                   shape: StadiumBorder()),
               child: Text('SIGH UP'),
               onPressed: () {
-                print("SIGH UP");
+                print("สมัครสมาชิก");
+                Navigator.pushNamed(context, 'register');
               },
             ),
           ],
